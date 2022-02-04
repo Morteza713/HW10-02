@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/questionFragment">
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.geoquizrefactor.QuestionFragment"
+        android:label="Question"
+        tools:layout="@layout/fragment_question">
+        <action
+            android:id="@+id/action_questionFragment_to_cheatFragment"
+            app:destination="@id/cheatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cheatFragment"
+        android:name="com.example.geoquizrefactor.CheatFragment"
+        android:label="Cheat"
+        tools:layout="@layout/fragment_cheat">
+        <argument
+            android:name="Answer"
+            app:argType="string" />
+    </fragment>
+</navigation>
